@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\financeiro.ApplicationCore\financeiro.ApplicationCore.csproj" />
+    <ProjectReference Include="..\financeiro.infrastructure\financeiro.infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

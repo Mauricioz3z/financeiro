@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Mauricio\\.nuget\\packages\\": {},
+    "C:\\Users\\mauricio.souza\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
       "projectName": "financeiro.ApplicationCore",
-      "projectPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
-      "packagesPath": "C:\\Users\\Mauricio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\obj\\",
+      "projectPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
+      "packagesPath": "C:\\Users\\mauricio.souza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro\\financeiro.ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mauricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mauricio.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

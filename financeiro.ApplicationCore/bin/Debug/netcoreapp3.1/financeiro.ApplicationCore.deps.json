@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "financeiro.ApplicationCore/1.0.0": {
+        "runtime": {
+          "financeiro.ApplicationCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "financeiro.ApplicationCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
