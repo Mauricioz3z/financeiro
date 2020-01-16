@@ -9,8 +9,8 @@ using financeiro.infrastructure.Data;
 namespace financeiro.infrastructure.Migrations
 {
     [DbContext(typeof(BackendContext))]
-    [Migration("20200115185447_AdicionaClasseContato")]
-    partial class AdicionaClasseContato
+    [Migration("20200115224319_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

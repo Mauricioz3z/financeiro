@@ -1,4 +1,5 @@
 ﻿using financeiro.ApplicationCore.Entity;
+using financeiro.infrastructure.EntityConfig;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,10 @@ namespace financeiro.infrastructure.Data
             modelBuilder.Entity<Cliente>().ToTable("Cliente");
             modelBuilder.Entity<Contato>().ToTable("Contato");
 
+            modelBuilder.ApplyConfiguration(new ClienteMap());
 
 
-            
+
         }
     }
 }

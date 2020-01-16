@@ -6,3 +6,11 @@ C:\Users\mauricio.souza\Documents\mine\financeiro\financeiro.ApplicationCore\obj
 C:\Users\mauricio.souza\Documents\mine\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.AssemblyInfo.cs
 C:\Users\mauricio.souza\Documents\mine\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.dll
 C:\Users\mauricio.souza\Documents\mine\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.pdb
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\bin\Debug\netcoreapp3.1\financeiro.ApplicationCore.deps.json
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\bin\Debug\netcoreapp3.1\financeiro.ApplicationCore.dll
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\bin\Debug\netcoreapp3.1\financeiro.ApplicationCore.pdb
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.csprojAssemblyReference.cache
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.AssemblyInfo.cs
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.dll
+C:\Users\Mauricio\source\repos\financeiro\financeiro.ApplicationCore\obj\Debug\netcoreapp3.1\financeiro.ApplicationCore.pdb
