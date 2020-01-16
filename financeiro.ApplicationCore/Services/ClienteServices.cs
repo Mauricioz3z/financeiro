@@ -1,4 +1,5 @@
 ﻿using financeiro.ApplicationCore.Entity;
+using financeiro.ApplicationCore.Interfaces.Repository;
 using financeiro.ApplicationCore.Interfaces.Services;
 using System;
 using System.Collections.Generic;
@@ -7,12 +8,12 @@ using System.Text;
 
 namespace financeiro.ApplicationCore.Services
 {
-    public class ClienteServices : IClienteServices
+    public class ClienteServices :  IClienteServices
     {
         //Regra de negocio aqui
 
-        protected readonly IClienteServices _clienteRepository;
-        public ClienteServices(IClienteServices clienteRepository)
+        protected readonly IClienteRepository _clienteRepository;
+        public ClienteServices(IClienteRepository clienteRepository)
         {
             _clienteRepository = clienteRepository;
         }

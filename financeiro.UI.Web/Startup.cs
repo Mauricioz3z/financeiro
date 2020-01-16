@@ -41,7 +41,14 @@ namespace financeiro.UI.Web
             services.AddRazorPages();
             services.AddDbContext<BackendContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-         
+
+
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient(typeof(IClienteRepository), typeof(ClienteRepository));
+            services.AddTransient(typeof(IClienteServices), typeof(ClienteServices));
+
+
+
 
         }
 

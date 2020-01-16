@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.infrastructure\\financeiro.infrastructure.csproj": {}
+    "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.infrastructure\\financeiro.infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj": {
+    "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
         "projectName": "financeiro.ApplicationCore",
-        "projectPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\Mauricio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\obj\\",
+        "projectPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\mauricio.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mauricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mauricio.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,20 +59,20 @@
         }
       }
     },
-    "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.infrastructure\\financeiro.infrastructure.csproj": {
+    "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.infrastructure\\financeiro.infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.infrastructure\\financeiro.infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.infrastructure\\financeiro.infrastructure.csproj",
         "projectName": "financeiro.infrastructure",
-        "projectPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.infrastructure\\financeiro.infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Mauricio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.infrastructure\\financeiro.infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mauricio.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mauricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mauricio.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\Mauricio\\source\\repos\\financeiro\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj"
+              "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\mauricio.souza\\Documents\\mine\\financeiro_\\financeiro.ApplicationCore\\financeiro.ApplicationCore.csproj"
               }
             }
           }

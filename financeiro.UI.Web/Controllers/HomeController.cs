@@ -12,18 +12,12 @@ namespace financeiro.UI.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        private readonly IClienteServices _clienteServices;
-
-        public HomeController(IClienteServices clienteServices)
-        {
-            _clienteServices = clienteServices;
-        }
+       
 
         public IActionResult Index()
         {
-            var x= _clienteServices.ObterTodos();
+          
 
             return View();
         }
