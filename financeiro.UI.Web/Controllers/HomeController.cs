@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using financeiro.UI.Web.Models;
+using financeiro.ApplicationCore.Interfaces.Services;
 
 namespace financeiro.UI.Web.Controllers
 {
@@ -13,13 +14,17 @@ namespace financeiro.UI.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IClienteServices _clienteServices;
+
+        public HomeController(IClienteServices clienteServices)
         {
-            _logger = logger;
+            _clienteServices = clienteServices;
         }
 
         public IActionResult Index()
         {
+            var x= _clienteServices.ObterTodos();
+
             return View();
         }
 

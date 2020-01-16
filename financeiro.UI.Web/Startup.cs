@@ -8,11 +8,15 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using financeiro.UI.Web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using financeiro.infrastructure.Data;
+using financeiro.ApplicationCore.Interfaces.Services;
+using financeiro.ApplicationCore.Entity;
+using financeiro.ApplicationCore.Services;
+using financeiro.ApplicationCore.Interfaces.Repository;
+using financeiro.infrastructure.Repositoty;
 
 namespace financeiro.UI.Web
 {
@@ -28,14 +32,16 @@ namespace financeiro.UI.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<BackendContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<BackendContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddDbContext<BackendContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+         
 
         }
 
