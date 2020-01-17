@@ -41,6 +41,12 @@ namespace financeiro.UI.Web
             services.AddRazorPages();
             services.AddDbContext<BackendContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
+            });
+
+
 
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
@@ -82,5 +88,8 @@ namespace financeiro.UI.Web
                 endpoints.MapRazorPages();
             });
         }
+
+
+
     }
 }
