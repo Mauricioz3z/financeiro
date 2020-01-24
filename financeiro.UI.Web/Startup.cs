@@ -1,22 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using financeiro.infrastructure.Data;
 using financeiro.ApplicationCore.Interfaces.Services;
-using financeiro.ApplicationCore.Entity;
 using financeiro.ApplicationCore.Services;
 using financeiro.ApplicationCore.Interfaces.Repository;
 using financeiro.infrastructure.Repositoty;
+using financeiro.ApplicationCore.Entity;
 
 namespace financeiro.UI.Web
 {
@@ -32,11 +27,22 @@ namespace financeiro.UI.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddIdentity<Usuario, IdentityRole>(options=> {
+                options.Password.RequiredLength = 6;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+
+            }).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<BackendContext>();
+
             services.AddDbContext<BackendContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<BackendContext>();
+
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<BackendContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddDbContext<BackendContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -47,7 +53,7 @@ namespace financeiro.UI.Web
             });
 
 
-
+            //Identity/Account/Register
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient(typeof(IClienteRepository), typeof(ClienteRepository));

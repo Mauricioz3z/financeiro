@@ -2661,6 +2661,9 @@
       "financeiro.ApplicationCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.1"
+        },
         "compile": {
           "bin/placeholder/financeiro.ApplicationCore.dll": {}
         },
