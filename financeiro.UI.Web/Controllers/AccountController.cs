@@ -29,6 +29,9 @@ namespace financeiro.UI.Web.Controllers
         [BindProperty]
         public InputModel Input { get; set; }
 
+        [BindProperty]
+        public InputModelLogin InputLogin { get; set; }
+
         public class InputModel
         {
             [Required]
@@ -37,20 +40,36 @@ namespace financeiro.UI.Web.Controllers
             public string Email { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "O campo {0} deve ter ao menos {2} e no máximo  {1} characteres.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Senha")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Display(Name = "Confirme a Senha")]
+            [Compare("Password", ErrorMessage = "As senhas não combinam.")]
             public string ConfirmPassword { get; set; }
         }
 
 
+        public class InputModelLogin
+        {
+            [Required]
+            [EmailAddress]
+            [Display(Name = "Email")]
+            public string Email { get; set; }
 
-       [HttpGet]
+            [Required]
+            [DataType(DataType.Password)]
+            [Display(Name = "Senha")]
+            public string Password { get; set; }
+
+
+        }
+
+
+
+        [HttpGet]
         public IActionResult Register() {
 
 
@@ -103,6 +122,93 @@ namespace financeiro.UI.Web.Controllers
         }
 
 
+
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string returnUrl = null)
+        {
+
+            //returnUrl = returnUrl ?? Url.Content("~/");
+
+
+     
+           
+            var result=  await _signInManager.PasswordSignInAsync(InputLogin.Email, InputLogin.Password, false,false);
+
+
+
+
+            if (result.Succeeded)
+            {
+                return LocalRedirect("/Home");
+            }
+            else
+            {
+                ViewBag.Email = InputLogin.Email;
+                ModelState.AddModelError("erro","Usuário ou senha incorretos!");
+                return View();
+            }
+         
+
+
+            //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            //if (ModelState.IsValid)
+            //{
+
+            //    var result = await _userManager.CreateAsync(user, Input.Password);
+            //    if (result.Succeeded)
+            //    {
+            //        //_logger.LogInformation("User created a new account with password.");
+
+            //        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            //        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            //        var callbackUrl = Url.Page(
+            //            "/Account/ConfirmEmail",
+            //            pageHandler: null,
+            //            values: new { area = "Identity", userId = user.Id, code = code },
+            //            protocol: Request.Scheme);
+
+            //        await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+            //            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+            //        if (_userManager.Options.SignIn.RequireConfirmedAccount)
+            //        {
+            //            return RedirectToPage("RegisterConfirmation", new { email = Input.Email });
+            //        }
+            //        else
+            //        {
+            //            await _signInManager.SignInAsync(user, isPersistent: false);
+            //            return LocalRedirect(returnUrl);
+            //        }
+            //    }
+            //    foreach (var error in result.Errors)
+            //    {
+            //        ModelState.AddModelError(string.Empty, error.Description);
+            //    }
+            //}
+
+            // If we got this far, something failed, redisplay form
+
+        }
+
+
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Logout()
+        {
+
+
+            _signInManager.SignOutAsync();
+            return LocalRedirect("/Home");
+        }
 
     }
 }

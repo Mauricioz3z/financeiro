@@ -41,15 +41,14 @@ namespace financeiro.UI.Web
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<BackendContext>();
+  
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddDbContext<BackendContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().AddRazorPagesOptions(options =>
             {
-                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
+                options.Conventions.AddPageRoute("/Home/Index", "");
             });
 
 
@@ -76,6 +75,7 @@ namespace financeiro.UI.Web
             {
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+
                 app.UseHsts();
             }
             app.UseHttpsRedirection();

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login V1</title>
+    <title>Financeiro</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,14 +46,18 @@
                 </div>
 
                 <form class="login100-form validate-form" method="post">
-                    <div asp-validation-summary="All" class="text-danger"></div>
+                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+                    @*<span asp-validation-for="c" class="text-danger"></span>*@
+
+
                     <span class="login100-form-title">
-                        Cadastre-se
+                        Entrar
                     </span>
 
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" placeholder="E-mail">
+                        <input class="input100" type="text" name="email" value="@ViewBag.Email" placeholder="E-mail">
 
 
                         <span class="symbol-input100">
@@ -70,24 +74,16 @@
                         </span>
 
                     </div>
+                    @Html.ValidationMessage("erro", "", new { @class = "text-danger" })
                     @*<span asp-validation-for="Input.Password" class="text-danger"></span>*@
 
 
-
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="ConfirmPassword" placeholder="Confirme a senha">
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-
-                    </div>
-                    @*<span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>*@
 
 
                     <div class="container-login100-form-btn">
 
                         <button class="login100-form-btn">
-                            Cadastrar
+                            Login
                         </button>
                     </div>
 
@@ -101,10 +97,9 @@
                     </div>
 
                     <div class="text-center p-t-136">
-                        <a class="txt2" href="/Account/Login">
-                            <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
-                            Ir para Login
-
+                        <a class="txt2" href="/Account/Register">
+                            Ir para Cadastro
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                         </a>
                     </div>
                 </form>

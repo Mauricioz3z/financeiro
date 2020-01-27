@@ -10,8 +10,8 @@ using financeiro.infrastructure.Data;
 namespace financeiro.infrastructure.Migrations
 {
     [DbContext(typeof(BackendContext))]
-    [Migration("20200120221634_refatoracao")]
-    partial class refatoracao
+    [Migration("20200127182251_teste")]
+    partial class teste
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -220,8 +220,8 @@ namespace financeiro.infrastructure.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<int>("Nome")
-                        .HasColumnType("int");
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasColumnType("nvarchar(256)")
@@ -243,8 +243,8 @@ namespace financeiro.infrastructure.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Sobrenome")
-                        .HasColumnType("int");
+                    b.Property<string>("Sobrenome")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
@@ -263,7 +263,7 @@ namespace financeiro.infrastructure.Migrations
                         .HasName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers");
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

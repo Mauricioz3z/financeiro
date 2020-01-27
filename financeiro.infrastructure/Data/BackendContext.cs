@@ -17,13 +17,15 @@ namespace financeiro.infrastructure.Data
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Contato> Contatos { get; set; }
 
+        public DbSet<Usuario> Usuario { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);// corrige :The entity type 'IdentityUserLogin<string>' requires a primary key to be defined
             modelBuilder.Entity<Cliente>().ToTable("Cliente");
             modelBuilder.Entity<Contato>().ToTable("Contato");
-
+            modelBuilder.Entity<Usuario>().ToTable("Usuario");
             modelBuilder.ApplyConfiguration(new ClienteMap());
 
 
