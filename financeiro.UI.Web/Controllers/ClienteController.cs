@@ -22,13 +22,13 @@ namespace financeiro.UI.Web.Controllers
         public IActionResult Index()
         {
 
-            return Json(_clienteServices.ObterTodos());
+            return Json(_clienteServices.List);
         }
 
         // GET: Clinte/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return Json(_clienteServices.ObterPorId(id));
         }
 
         // GET: Clinte/Create

@@ -6,16 +6,10 @@ using System.Text;
 
 namespace financeiro.ApplicationCore.Interfaces.Services
 {
-  public  interface IClienteServices
-    {
+  public  interface IClienteServices : IServiceBase<Cliente>    {
         //da pra melhorar essa classe trabalhando com  dados gernericos
+        Cliente ObterClientePorContato(int contatoId);
 
-        Cliente Adicionar(Cliente entity);
-        void Atualizar(Cliente entity);
-        IEnumerable<Cliente> ObterTodos();
-        Cliente ObterPorId(int Id);
-        IEnumerable<Cliente> Buscar(Expression<Func<Cliente, bool>> predicado);
-        void Remover(Cliente entity);
 
     }
 }

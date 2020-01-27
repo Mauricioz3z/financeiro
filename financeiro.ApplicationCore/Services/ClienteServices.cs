@@ -8,44 +8,26 @@ using System.Text;
 
 namespace financeiro.ApplicationCore.Services
 {
-    public class ClienteServices :  IClienteServices
-    {
+    public class ClienteServices : ServiceBase<Cliente>, IClienteServices
+    { 
         //Regra de negocio aqui
 
-        protected readonly IClienteRepository _clienteRepository;
-        public ClienteServices(IClienteRepository clienteRepository)
+        protected readonly IClienteRepository _clienteReposotory;
+
+        public ClienteServices(IClienteRepository Repository) : base(Repository)
         {
-            _clienteRepository = clienteRepository;
+            _clienteReposotory = Repository;
         }
 
-        public Cliente Adicionar(Cliente entity)
+        public Cliente ObterClientePorContato(int contatoId)
         {
-            return _clienteRepository.Adicionar(entity);
+           return _clienteReposotory.ObterClientePorContato(contatoId);
         }
 
-        public void Atualizar(Cliente entity)
-        {
-             _clienteRepository.Atualizar(entity);
-        }
 
-        public IEnumerable<Cliente> Buscar(Expression<Func<Cliente, bool>> predicado)
-        {
-           return _clienteRepository.Buscar(predicado);
-        }
 
-        public Cliente ObterPorId(int Id)
-        {
-            return _clienteRepository.ObterPorId(Id);
-        }
 
-        public IEnumerable<Cliente> ObterTodos()
-        {
-            return _clienteRepository.ObterTodos();
-        }
 
-        public void Remover(Cliente entity)
-        {
-            _clienteRepository.Remover(entity);
-        }
+     
     }
 }

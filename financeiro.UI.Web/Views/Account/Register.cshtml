@@ -1,5 +1,5 @@
 ﻿@page
-@model RegisterModel
+
 @{
     Layout = null;
 }
@@ -53,7 +53,7 @@
 
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" asp-for="Input.Email" placeholder="E-mail">
+                        <input class="input100" type="text" name="email" placeholder="E-mail">
 
 
                         <span class="symbol-input100">
@@ -62,26 +62,26 @@
 
 
                     </div>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    @*<span asp-validation-for="Input.Email" class="text-danger"></span>*@
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" asp-for="Input.Password" placeholder="Senha">
+                        <input class="input100" type="password" name="password" placeholder="Senha">
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
 
                     </div>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    @*<span asp-validation-for="Input.Password" class="text-danger"></span>*@
 
 
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" asp-for="Input.ConfirmPassword" placeholder="Confirme a senha">
+                        <input class="input100" type="password" name="ConfirmPassword" placeholder="Confirme a senha">
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
 
                     </div>
-                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    @*<span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>*@
 
 
                     <div class="container-login100-form-btn">
