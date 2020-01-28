@@ -1,0 +1,13 @@
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.infrastructure.deps.json
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.infrastructure.runtimeconfig.json
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.infrastructure.runtimeconfig.dev.json
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.infrastructure.dll
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.infrastructure.pdb
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.ApplicationCore.dll
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\bin\Release\netcoreapp3.1\financeiro.ApplicationCore.pdb
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\obj\Release\netcoreapp3.1\financeiro.infrastructure.csprojAssemblyReference.cache
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\obj\Release\netcoreapp3.1\financeiro.infrastructure.AssemblyInfoInputs.cache
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\obj\Release\netcoreapp3.1\financeiro.infrastructure.AssemblyInfo.cs
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\obj\Release\netcoreapp3.1\financeiro.infrastructure.csproj.CopyComplete
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\obj\Release\netcoreapp3.1\financeiro.infrastructure.dll
+C:\Users\Mauricio\source\repos\financeiro\financeiro.infrastructure\obj\Release\netcoreapp3.1\financeiro.infrastructure.pdb

@@ -12,6 +12,8 @@ using financeiro.ApplicationCore.Services;
 using financeiro.ApplicationCore.Interfaces.Repository;
 using financeiro.infrastructure.Repositoty;
 using financeiro.ApplicationCore.Entity;
+using Microsoft.AspNetCore.HttpOverrides;
+using System.Net;
 
 namespace financeiro.UI.Web
 {
@@ -38,7 +40,7 @@ namespace financeiro.UI.Web
             }).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<BackendContext>();
 
             services.AddDbContext<BackendContext>(options =>
-                options.UseSqlServer(
+                options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
 
   
@@ -51,7 +53,10 @@ namespace financeiro.UI.Web
                 options.Conventions.AddPageRoute("/Home/Index", "");
             });
 
-
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
+            });
             //Identity/Account/Register
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
@@ -82,6 +87,11 @@ namespace financeiro.UI.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
 
             app.UseAuthentication();
             app.UseAuthorization();
