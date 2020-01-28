@@ -40,7 +40,7 @@ namespace financeiro.UI.Web
             }).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<BackendContext>();
 
             services.AddDbContext<BackendContext>(options =>
-                options.UseMySql(
+                options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
   

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using financeiro.UI.Web.Models;
 using financeiro.ApplicationCore.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace financeiro.UI.Web.Controllers
 {
@@ -22,6 +23,8 @@ namespace financeiro.UI.Web.Controllers
             return View();
         }
 
+
+     
         public IActionResult Privacy()
         {
             return View();

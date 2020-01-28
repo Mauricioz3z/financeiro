@@ -14,38 +14,71 @@ namespace financeiro.infrastructure.Data
         public static void Initialize(BackendContext context)
         {
 
-            if (!context.Users.Any())
-            {
-                var usuario = new Usuario
-                {
-                    Nome = "Admin",
-                    Email = "admin@domain.com",
-                    UserName = "admin@domain.com",
-                    PasswordHash= "123123",
-                    SecurityStamp = Guid.NewGuid().ToString(),
-                };
 
-                var passwordHash = new PasswordHasher<Usuario>();
-                var password = passwordHash.HashPassword(usuario, usuario.PasswordHash);
-                
+            if (!context.Usuario.Any())//e=>e.UserName== "admin@domain.com"
+            {
+              
+                Usuario applicationUser = new Usuario();
+                applicationUser.UserName = "admin@domain.com";
+                applicationUser.Email = "admin@domain.com";
+                applicationUser.NormalizedUserName = "admin@domain.com";
+                context.Users.Add(applicationUser);
+
+                var _passwordHasher = new PasswordHasher<Usuario>();
+                var hasedPassword = _passwordHasher.HashPassword(applicationUser, "123123");
+                applicationUser.SecurityStamp = Guid.NewGuid().ToString();
+                applicationUser.PasswordHash = hasedPassword;
+                context.SaveChanges();
+
+
+                Usuario UserGerente = new Usuario();
+                UserGerente.UserName = "gerente@domain.com";
+                UserGerente.Email = "gerente@domain.com";
+                UserGerente.NormalizedUserName = "gerente@domain.com";
+                context.Users.Add(UserGerente);
+
+                var _gerentepasswordHasher = new PasswordHasher<Usuario>();
+                var gerentehasedPassword = _gerentepasswordHasher.HashPassword(applicationUser, "123123");
+                UserGerente.SecurityStamp = Guid.NewGuid().ToString();
+                UserGerente.PasswordHash = gerentehasedPassword;
+                context.SaveChanges();
+
+
+                Usuario UserCoordenador = new Usuario();
+                UserCoordenador.UserName = "coordenador@domain.com";
+                UserCoordenador.Email = "coordenador@domain.com";
+                UserCoordenador.NormalizedUserName = "coordenador@domain.com";
+                context.Users.Add(UserCoordenador);
+
+                var _coordenadorpasswordHasher = new PasswordHasher<Usuario>();
+                var corndenadorhasedPassword = _coordenadorpasswordHasher.HashPassword(UserCoordenador, "123123");
+                UserCoordenador.SecurityStamp = Guid.NewGuid().ToString();
+                UserCoordenador.PasswordHash = corndenadorhasedPassword;
+                context.SaveChanges();
+
+
+
+
 
                 context.Roles.Add(new IdentityRole { Name = "Admin" });
-                context.Users.Add(usuario);
+                context.Roles.Add(new IdentityRole { Name = "Gerente" });
+                context.Roles.Add(new IdentityRole { Name = "Coordenador" });
                 context.SaveChanges();
+
+
                 var admin = context.Users.FirstOrDefault(u => u.UserName == "admin@domain.com");
-                var role = context.Roles.FirstOrDefault(u => u.Name == "Admin");
- 
-                context.UserRoles.Add(new IdentityUserRole<string> { UserId = admin.Id, RoleId = role.Id });
-                context.SaveChanges();
+                var adminRole = context.Roles.FirstOrDefault(u => u.Name == "Admin");
+                context.UserRoles.Add(new IdentityUserRole<string> { UserId = admin.Id, RoleId = adminRole.Id });
+
+                var gerente = context.Users.FirstOrDefault(u => u.UserName == "gerente@domain.com");
+                var gerenteRole = context.Roles.FirstOrDefault(u => u.Name == "Gerente");
+                context.UserRoles.Add(new IdentityUserRole<string> { UserId = gerente.Id, RoleId = gerenteRole.Id });
+
+                var coordenador = context.Users.FirstOrDefault(u => u.UserName == "coordenador@domain.com");
+                var coordenadorRole = context.Roles.FirstOrDefault(u => u.Name == "Coordenador");
+                context.UserRoles.Add(new IdentityUserRole<string> { UserId = coordenador.Id, RoleId = coordenadorRole.Id });
+
             }
-
-        
-              
-            
-
-
-          
-
 
 
             if (context.Cliente.Any())
