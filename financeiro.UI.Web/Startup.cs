@@ -62,7 +62,8 @@ namespace financeiro.UI.Web
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient(typeof(IClienteRepository), typeof(ClienteRepository));
             services.AddTransient(typeof(IClienteServices), typeof(ClienteServices));
-
+            services.AddTransient(typeof(IUsuarioServices), typeof(UsuarioServices));
+            
 
 
 
