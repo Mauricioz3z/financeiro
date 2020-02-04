@@ -133,22 +133,26 @@ namespace financeiro.UI.Web.Controllers
 
      
            
-            var result=  await _signInManager.PasswordSignInAsync(InputLogin.Email, InputLogin.Password, false,false);
-
-
-
-
-            if (result.Succeeded)
+      
+            if (ModelState.IsValid)
             {
-                return LocalRedirect("/Home");
+                var result = await _signInManager.PasswordSignInAsync(InputLogin.Email, InputLogin.Password, false, false);
+
+
+                if (result.Succeeded)
+                {
+                    return LocalRedirect("/Home");
+                }
+                else
+                {
+                    ViewBag.Email = InputLogin.Email;
+                    ModelState.AddModelError("erro", "Usuário ou senha incorretos!");
+                   
+                }
             }
-            else
-            {
-                ViewBag.Email = InputLogin.Email;
-                ModelState.AddModelError("erro","Usuário ou senha incorretos!");
-                return View();
-            }
-         
+            return View();
+
+
 
 
             //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
