@@ -578,3 +578,4 @@ C:\Users\Mauricio\source\repos\financeiro\financeiro.UI.Web\obj\Debug\netcoreapp
 C:\Users\Mauricio\source\repos\financeiro\financeiro.UI.Web\obj\Debug\netcoreapp3.1\Razor\Views\Relatorios\Index.cshtml.g.cs
 C:\Users\Mauricio\source\repos\financeiro\financeiro.UI.Web\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Edit.cshtml.g.cs
 C:\Users\Mauricio\source\repos\financeiro\financeiro.UI.Web\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Index.cshtml.g.cs
+C:\Users\Mauricio\source\repos\financeiro\financeiro.UI.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login2.cshtml.g.cs

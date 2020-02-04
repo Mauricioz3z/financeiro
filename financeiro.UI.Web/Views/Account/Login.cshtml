@@ -3,132 +3,98 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Financeiro</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <link rel="icon" type="image/png" href="~/images/login/icons/favicon.ico" />
-
-
-
-    <link href="~/vendors/login/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-
-    <link href="~/fonts/login/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
-
-    <link rel="stylesheet" type="text/css" href="~/vendors/login/animate/animate.css">
-
-
-    <link rel="stylesheet" type="text/css" href="~/vendors/login/css-hamburgers/hamburgers.min.css">
-
-    <link rel="stylesheet" type="text/css" href="~/vendors/login/select2/select2.min.css">
-
-
-
-    <link rel="stylesheet" type="text/css" href="~/css/login/util.css">
-
-    <link rel="stylesheet" type="text/css" href="~/css/login/main.css">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/theme/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/theme/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/theme/admin/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../index2.html"><b>Admin</b>LTE</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Sign in to start your session</p>
 
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <div class="login100-pic js-tilt" data-tilt>
-                    <img src="~/images/login/img-01.png" alt="IMG">
-                </div>
-
-                <form class="login100-form validate-form" method="post">
-                    @*<div asp-validation-summary="All" class="text-danger"></div>*@
-
-                    @*<span asp-validation-for="c" class="text-danger"></span>*@
-
-
-                    <span class="login100-form-title">
-                        Entrar
-                    </span>
-
-
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" value="@ViewBag.Email" placeholder="E-mail">
-
-
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-
-
+                <form action="../../index3.html" method="post">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
                     </div>
-                    @*<span asp-validation-for="Input.Email" class="text-danger"></span>*@
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="password" placeholder="Senha">
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
                     </div>
-                    @Html.ValidationMessage("erro", "", new { @class = "text-danger" })
-                    @*<span asp-validation-for="Input.Password" class="text-danger"></span>*@
-
-
-
-
-                    <div class="container-login100-form-btn">
-
-                        <button class="login100-form-btn">
-                            Login
-                        </button>
-                    </div>
-
-                    <div class="text-center p-t-12">
-                        <span class="txt1">
-                            Esqueceu
-                        </span>
-                        <a class="txt2" href="#">
-                            login/senha?
-                        </a>
-                    </div>
-
-                    <div class="text-center p-t-136">
-                        <a class="txt2" href="/Account/Register">
-                            Ir para Cadastro
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                        </a>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Remember Me
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        </div>
+                        <!-- /.col -->
                     </div>
                 </form>
+
+                <div class="social-auth-links text-center mb-3">
+                    <p>- OR -</p>
+                    <a href="#" class="btn btn-block btn-primary">
+                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                    </a>
+                    <a href="#" class="btn btn-block btn-danger">
+                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                    </a>
+                </div>
+                <!-- /.social-auth-links -->
+
+                <p class="mb-1">
+                    <a href="forgot-password.html">I forgot my password</a>
+                </p>
+                <p class="mb-0">
+                    <a href="register.html" class="text-center">Register a new membership</a>
+                </p>
             </div>
+            <!-- /.login-card-body -->
         </div>
     </div>
+    <!-- /.login-box -->
+    <!-- jQuery -->
+    <script src="~/theme/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/theme/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/theme/admin/js/adminlte.min.js"></script>
 
-
-
-
-
-    <script src="~/vendors/login/jquery/jquery-3.2.1.min.js"></script>
-
-    <script src="~/vendors/login/bootstrap/js/popper.js"></script>
-    <script src="~/vendors/login/bootstrap/js/bootstrap.min.js"></script>
-
-    <script src="~/vendors/login/select2/select2.min.js"></script>
-
-    <script src="~/vendors/login/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
-    </script>
-
-
-    <script src="~/js/login/main.js"></script>
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
-    }
 </body>
 </html>

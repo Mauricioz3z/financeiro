@@ -25,6 +25,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\" />
+    <Folder Include="wwwroot\theme\admin\" />
+    <Folder Include="wwwroot\theme\plugins\" />
   </ItemGroup>
 
 

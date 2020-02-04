@@ -29,7 +29,7 @@ namespace financeiro.UI.Web.Controllers
         public IActionResult Edit(string id)
         {
 
-            ViewBag.Roles= ViewBag.ID = new SelectList(setores, "setorNome");
+          //  ViewBag.Roles= ViewBag.ID = new SelectList(setores, "setorNome");
 
             return View(_usuarioServices.List.Where(e=>e.Id==id).Select(f => new UsuarioViewModel { Id = f.Id, Nome = f.UserName }).FirstOrDefault());
 
